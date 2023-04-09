@@ -1,7 +1,6 @@
 import React from 'react'
 
 const ContactCard = props => {
-    // eslint-disable-next-line
     const { id, name, email } = props.contact
 
     return (
@@ -15,7 +14,11 @@ const ContactCard = props => {
                 </div>
             </div>
             <div className='icon-right'>
-                <i className="trash alternate outline icon right aligned content"></i>
+                <i 
+                    className="trash alternate outline icon right aligned content"
+                    onClick={() => props.clickHander(id)}    
+                > 
+                </i>
             </div>
         </div>
     )
